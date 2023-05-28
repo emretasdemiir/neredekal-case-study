@@ -1,62 +1,30 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-
-import Counter from '../features/counter/Counter'
 import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Link from 'next/link'
+import { Box, Container } from '@mui/material';
 
 const IndexPage: NextPage = () => {
+
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Redux Toolkit</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Neredekal Case Study</title>
+        <link href="https://fonts.cdnfonts.com/css/pokemon-solid?styles=24573" rel="stylesheet" />
       </Head>
-      <header className={styles.header}>
-        <img src="/logo.svg" className={styles.logo} alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className={styles.link}
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className={styles.link}
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className={styles.link}
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className={styles.link}
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+      <Box className={styles.container}>
+        {/* <img src='https://wallpapers.com/images/featured/va6139eg5csznzmw.jpg' width={600} height={400} /> */}
+        <Box className={styles.textContainer}>
+          <h1 className={styles.textStyle}>
+            Welcome to my pokémon app
+          </h1>
+          <h2>
+            <span className={styles.textStyle}>Go To </span>
+            <Link href='/pokemon-list' className={styles.linkStyle}>Pokédex</Link>
+          </h2>
+        </Box>
+      </Box>
+    </>
   )
 }
 

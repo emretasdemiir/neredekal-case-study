@@ -1,10 +1,12 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 
-import counterReducer from './features/counter/counterSlice'
+import pokemonReducer from './redux/pokemonSlice'
 
 export function makeStore() {
   return configureStore({
-    reducer: { counter: counterReducer },
+    reducer: {
+      pokemonStore: pokemonReducer
+    },
   })
 }
 
